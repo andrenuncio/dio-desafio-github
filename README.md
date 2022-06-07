@@ -1,2 +1,2 @@
-# dio-desafio-github
-Desafio de Projeto 
+# Repositório de Git para aprendizado   
+
