@@ -7,6 +7,7 @@ export class Course {
     duration: number = 0;
     rating: number = 5;
     releaseDate: string = 'Mes, Dia, Ano';
+    description: string = '';
 }
 
 // export class Course {
