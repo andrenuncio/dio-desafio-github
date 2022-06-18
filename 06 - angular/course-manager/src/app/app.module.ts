@@ -8,6 +8,7 @@ import { StarComponent } from './star/star.component';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { Error404Component } from './error-404/error-404.component';
 import { CourseInfoComponent } from './courses/course-info.component';
 
@@ -25,6 +26,7 @@ import { CourseInfoComponent } from './courses/course-info.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: 'courses', component: CourseListComponent
