@@ -14,9 +14,7 @@ export class CourseListComponent implements OnInit{
 
     _courses: Course[] = [];
 
-    constructor(private courseService: CourseService){
-
-    }
+    constructor(private courseService: CourseService){}
 
     _filterBy: string = '';
     
@@ -37,6 +35,17 @@ export class CourseListComponent implements OnInit{
             }
         );  
         
+    }
+
+    deleteById(courseId: number): void{
+        this.courseService.deleteById(courseId).subscribe({
+            next: () => {
+                console.log('Deleted with success!!!');
+                this.retrieveAll();
+                
+            },
+            error: err => console.log('Error', err)
+        })
     }
 
     set filter(value: string){
