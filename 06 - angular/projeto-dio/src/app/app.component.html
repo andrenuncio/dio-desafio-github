@@ -1,0 +1,31 @@
+<h1 class="text-success">Angular Diretivas</h1>
+
+<!-- DIretivas de Atributo-->
+<div [ngStyle]="{background: count < 5 ? 'red' : 'green'}"
+    [ngClass]="{custom: count > 5}">
+    <h2 class="text-center">Contador: {{count}}</h2>
+</div>
+
+<!-- DIretivas Estruturais-->
+
+<h2 *ngIf="count > 7; else menor">O Contador passou de 7!!</h2>
+
+<ng-template #menor> <h2>Contador MENOR que 7</h2></ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+    <li class="list-group-item" *ngSwitchCase="3">Eh igual a  3</li>
+    <li class="list-group-item" *ngSwitchCase="4">Eh igual a  4</li>
+    <li class="list-group-item" *ngSwitchCase="5">Eh igual a  5</li>
+    <li class="list-group-item" *ngSwitchCase="6">Eh igual a  6</li>
+    <li class="list-group-item" *ngSwitchDefault>Eh Default</li>
+</ul>
+
+<ul class="list-group mx-auto col-3 my-3">
+    <li class="list-group-item"
+    *ngFor="let pessoa of pessoas" 
+    appMarcaTexto   
+    >
+    O nome da pessoa eh {{pessoa.nome}} {{pessoa.sobrenome}}
+</li>
+</ul>
+
