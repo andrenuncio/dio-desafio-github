@@ -38,4 +38,14 @@ export class UserService {
     return this.httpClient.delete<User>(`${this.apiUrl}/id/${id}`)
   }
 
+  // Edita Usuario -- UPDATE
+  updateUser(id: string, user: User): Observable<User>{
+    return this.httpClient.put<User>(`${this.apiUrl}/id/${id}`,user);
+  }
+
+  //  Lista Usuario Unico 
+  getUser(id : string) :Observable<User[]>{
+    return this.httpClient.get<User[]>(`${this.apiUrl}/id/${id}`);
+  }
+
 }
