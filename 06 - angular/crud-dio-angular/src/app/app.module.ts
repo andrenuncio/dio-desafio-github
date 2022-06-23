@@ -22,6 +22,9 @@ import {MatIconModule} from '@angular/material/icon';
 
 
 import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
+import { PipesExampleComponent } from './pages/pipes-example/pipes-example.component';
+import { UpperCasePipe } from '@angular/common';
+import { PrintListPipe } from './cpipes/print-list.pipe';
 
 
 @NgModule({
@@ -31,7 +34,9 @@ import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
     UsersListComponent,
     UsersFormComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    PipesExampleComponent,
+    PrintListPipe
     
   ],
   imports: [
@@ -48,7 +53,7 @@ import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [UpperCasePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
